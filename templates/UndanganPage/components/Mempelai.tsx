@@ -109,7 +109,7 @@ const Mempelai = () => {
             Putra Dari Bapak H Syamsuddin (Alm) & Ibu Hj Suma Indah (Almh)
           </p>
           <p className="text-sm lg:text-base font-semibold">
-            Besuki - Mojo Pasuruan
+            Kebonrejo - Grati Pasuruan
           </p>
         </motion.div>
       </motion.div>

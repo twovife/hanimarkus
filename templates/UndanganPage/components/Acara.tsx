@@ -76,7 +76,7 @@ const Mempelai = () => {
         </motion.h1>
         <motion.h1
           variants={childVariants}
-          className={`${windsong.className} text-6xl lg:text-7xl text-center mx-auto`}
+          className={`${windsong.className} text-5xl lg:text-7xl text-center mx-auto`}
         >
           Akad Nikah
         </motion.h1>
@@ -90,17 +90,17 @@ const Mempelai = () => {
         <div className="flex justify-center items-center mx-auto gap-3">
           <motion.div
             variants={contentVariants}
-            className={`${mont.className} text-5xl font-semibold text-gray-500 text-end mx-auto`}
+            className={`${mont.className} text-4xl font-semibold text-gray-500 text-end mx-auto`}
           >
-            <motion.div variants={childVariants}>0 1</motion.div>
-            <motion.div variants={childVariants}>D E S</motion.div>
-            <motion.div variants={childVariants}>2 3</motion.div>
+            <motion.div variants={childVariants}>01</motion.div>
+            <motion.div variants={childVariants}>DES</motion.div>
+            <motion.div variants={childVariants}>23</motion.div>
           </motion.div>
           <motion.div
             variants={contentVariants}
-            className={`${mont.className} text-4xl text-start mx-auto leading-snug`}
+            className={`${mont.className} text-3xl text-start mx-auto leading-snug`}
           >
-            <motion.div variants={childVariants}>07:00</motion.div>
+            <motion.div variants={childVariants}>08:00</motion.div>
             <motion.div variants={childVariants}>s/d</motion.div>
             <motion.div variants={childVariants}>11:00</motion.div>
           </motion.div>

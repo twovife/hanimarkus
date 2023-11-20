@@ -3,6 +3,7 @@ import { motion, Variants } from "framer-motion";
 import aset1 from "../../../public/Asset-1.webp";
 import bri from "../../../public/bri.png";
 import Image from "next/image";
+import { IoHome } from "react-icons/io5";
 
 import { Great_Vibes, Montserrat, WindSong } from "next/font/google";
 import ButtonCopy from "./ButtonCopy";
@@ -71,17 +72,39 @@ const Penutup = () => {
           Wedding Gift
         </div>
         <div className="text-center mx-auto text-lg px-12">
-          <p>Doa Restu Anda merupakan karunia yang sangat berarti bagi kami</p>
+          <p>Doa Restu Anda adalah anugerah yang sangat berarti bagi kami. </p>
           <p>
-            Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat
-            memberi kado melalui :
+            Jika bentuk dukungan Anda adalah melalui pemberian, Anda dapat
+            memberikan hadiah melalui:
           </p>
         </div>
-        <div className="mx-auto text-center">
-          <Image src={bri} alt="atmbri" className="w-1/3 mx-auto" />
-          <p className="text-center">AN. HANIFIAH ANINNISA</p>
-          <p className="text-center font-semibold">312312312312</p>
-          <ButtonCopy dataValue="0332556337" />
+        <div className="flex gap-3 items-center justify-center w-full">
+          <div className="text-center">
+            <Image src={bri} alt="atmbri" className="w-1/2 mx-auto" />
+            <p className="text-center">AN. Hanifiah Anin Nisa'</p>
+            <ButtonCopy dataValue="626101024843533" />
+            <p className="text-center font-semibold">6261 0102 4843 533</p>
+          </div>
+          <div className="text-center">
+            <Image src={bri} alt="atmbri" className="w-1/2 mx-auto" />
+            <p className="text-center">AN. Makrus Anwar</p>
+            <ButtonCopy dataValue="724201000573509" />
+            <p className="text-center font-semibold">7242 0100 0573 509</p>
+          </div>
+        </div>
+        <div className="flex items-center justify-center w-full">
+          <div className="text-center">
+            <IoHome className="text-9xl mx-auto" />
+            <p className="text-center">Hanifiah Anin Nisa'</p>
+            <ButtonCopy
+              dataValue="Rt/Rw 01/01 Dsn. Besuki Ds. Jugo Kec. Mojo Kab. Kediri (masjid
+              Abdulloh)"
+            />
+            <p className="text-center">
+              Rt/Rw 01/01 Dsn. Besuki Ds. Jugo <br /> Kec. Mojo Kab. Kediri
+              (masjid Abdulloh)
+            </p>
+          </div>
         </div>
       </motion.div>
     </motion.div>

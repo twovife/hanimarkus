@@ -70,7 +70,7 @@ const Resepsi = () => {
       >
         <motion.h1
           variants={childVariants}
-          className={`${windsong.className} text-6xl text-center mx-auto`}
+          className={`${windsong.className} text-5xl text-center mx-auto`}
         >
           Resepsi
         </motion.h1>

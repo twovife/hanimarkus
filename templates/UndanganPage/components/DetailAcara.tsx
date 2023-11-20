@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Great_Vibes, Montserrat, WindSong } from "next/font/google";
 import Timer from "./Timer";
 import { BsFillCalendar2DateFill } from "react-icons/bs";
+import { MdSwipeUp } from "react-icons/md";
 import useWindowHeight from "@/hooks/useWindowHeight";
 
 const windsong = WindSong({ subsets: ["latin"], weight: ["400", "500"] });
@@ -58,6 +59,7 @@ const DetailAcara = () => {
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
+      animate="animated"
       viewport={{ once: false, amount: 0.8 }}
       style={{ height: `${height}px` }}
       className="bg-main relative z-0 overflow-hidden"
@@ -119,8 +121,25 @@ const DetailAcara = () => {
             <p>Tambahkan Pengingat</p>
           </button>
         </motion.div>
-
-        <motion.div></motion.div>
+      </motion.div>
+      <motion.div
+        initial={{
+          y: 0,
+          opacity: 0,
+        }}
+        animate={{
+          y: [60, 30, 0],
+          opacity: [1, 0.8, 0],
+        }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          repeatDelay: 0.5,
+        }}
+        className="absolute bottom-1/4 left-1/2 -translate-x-1/2 z-10 flex"
+      >
+        <MdSwipeUp className="text-6xl text-gray-500" />
       </motion.div>
     </motion.div>
   );
