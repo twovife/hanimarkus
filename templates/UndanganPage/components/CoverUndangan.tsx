@@ -7,6 +7,7 @@ import AnimasiKananAtas from "./AnimasiKananAtas";
 import { Great_Vibes, Montserrat, WindSong } from "next/font/google";
 import { motion } from "framer-motion";
 import useWindowHeight from "@/hooks/useWindowHeight";
+import { useRouter } from "next/router";
 // import "./cover.css";
 
 const windsong = WindSong({ subsets: ["latin"], weight: ["400", "500"] });
@@ -25,6 +26,9 @@ const CoverUndangan: FC<CoverUndanganProps> = ({ isOpen, setIsOpen }) => {
   };
 
   const height = useWindowHeight();
+
+  const router = useRouter();
+  const toParam = router.query?.to;
 
   return (
     <motion.div
@@ -63,7 +67,7 @@ const CoverUndangan: FC<CoverUndanganProps> = ({ isOpen, setIsOpen }) => {
           Kepada Yth Bapak / Ibu / Saudara / i :
         </div>
         <div className={`${mont.className} text-lg lg:text-2xl font-semibold`}>
-          Nama Disini
+          {toParam ?? "My Best Friend"}
         </div>
         <div className={`${mont.className} text-xs lg:text-base`}>
           Mohon maaf jika ada kesalahan penulisan nama & gelar
