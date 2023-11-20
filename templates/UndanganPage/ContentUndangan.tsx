@@ -18,7 +18,7 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
 
   useEffect(() => {
     const handleScroll = (event: any) => {
-      if (isScrollEnabled) {
+      if (isScrollEnabled && isOpen) {
         let newActiveComponent: any;
 
         if (event.deltaY > 0) {
@@ -52,7 +52,7 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
       const currentY = event.touches[0].clientY;
       const touchDistance = Math.abs(currentY - startY);
 
-      if (isScrollEnabled && touchDistance > 10) {
+      if (isScrollEnabled && touchDistance > 10 && isOpen) {
         // 10 is the threshold value
         let newActiveComponent: any;
         if (currentY > startY) {
