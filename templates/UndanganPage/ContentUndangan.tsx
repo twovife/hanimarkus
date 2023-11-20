@@ -42,10 +42,17 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
       }
     };
 
+    const handleTouchMove = () => {
+      const event = new Event("wheel");
+      document.dispatchEvent(event);
+    };
+
     window.addEventListener("wheel", handleScroll);
+    document.addEventListener("touchmove", handleTouchMove);
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
+      document.addEventListener("touchmove", handleTouchMove);
     };
   }, [isScrollEnabled]);
 
