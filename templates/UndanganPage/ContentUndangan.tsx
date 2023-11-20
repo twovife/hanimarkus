@@ -43,7 +43,6 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
     };
 
     let startY = 0;
-
     const handleTouchStart = (event: TouchEvent) => {
       startY = event.touches[0].clientY;
     };
@@ -51,14 +50,24 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
     const handleTouchMove = (event: TouchEvent) => {
       const currentY = event.touches[0].clientY;
 
-      if (currentY > startY) {
-        // Touch ke bawah
-        alert("scoll kebawah");
-        // console.log('Touch ke bawah');
-      } else if (currentY < startY) {
-        // Touch ke atas
-        alert("scoll keatas");
-        // console.log('Touch ke atas');
+      if (isScrollEnabled) {
+        let newActiveComponent: any;
+        if (currentY > startY) {
+          newActiveComponent = Math.max(activeComponent - 1, 1);
+        } else if (currentY < startY) {
+          newActiveComponent = Math.min(activeComponent + 1, 7);
+        }
+
+        // Update nilai activeComponent hanya jika nilainya valid
+        setActiveComponent(newActiveComponent);
+
+        // Menonaktifkan fungsi scroll untuk sementara
+        setScrollEnabled(false);
+
+        // Mengaktifkan kembali fungsi scroll setelah 3 detik
+        setTimeout(() => {
+          setScrollEnabled(true);
+        }, 2000);
       }
 
       // Update nilai startY untuk mendeteksi gerakan selanjutnya
