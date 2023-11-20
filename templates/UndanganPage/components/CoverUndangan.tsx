@@ -1,11 +1,13 @@
 import Image from "next/image";
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import bg1 from "../../../public/background1.webp";
 import { BsEnvelopeHeartFill } from "react-icons/bs";
 import AnimasiKiriBawah from "./AnimasiKiriBawah";
 import AnimasiKananAtas from "./AnimasiKananAtas";
 import { Great_Vibes, Montserrat, WindSong } from "next/font/google";
 import { motion } from "framer-motion";
+import useWindowHeight from "@/hooks/useWindowHeight";
+// import "./cover.css";
 
 const windsong = WindSong({ subsets: ["latin"], weight: ["400", "500"] });
 const gvibes = Great_Vibes({ subsets: ["latin"], weight: ["400"] });
@@ -22,17 +24,21 @@ const CoverUndangan: FC<CoverUndanganProps> = ({ isOpen, setIsOpen }) => {
     open: { opacity: 0, y: "-100%" },
   };
 
+  const height = useWindowHeight();
+
   return (
     <motion.div
       animate={isOpen ? "open" : "closed"}
       variants={variants}
       transition={{ duration: 1, ease: "easeInOut" }}
-      className="h-screen bg-main flex justify-evenly items-center flex-col fixed top-0 right-0 z-10 w-full lg:w-1/3 overflow-hidden"
+      style={{ height: `${height}px` }}
+      className={` bg-main flex justify-evenly items-center flex-col fixed top-0 right-0 z-10 w-full lg:w-1/3 overflow-hidden`} //height: calc(var(--vh, 1vh) * 100);
     >
       <Image
         src={bg1}
         alt="bgpictures"
-        className="absolute z-0 h-screen object-cover"
+        style={{ height: `${height}px` }}
+        className={`absolute z-0 object-cover`}
       />
       <AnimasiKiriBawah />
       <AnimasiKananAtas />

@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Great_Vibes, Montserrat, WindSong } from "next/font/google";
 import Timer from "./Timer";
 import { BsFillCalendar2DateFill } from "react-icons/bs";
+import useWindowHeight from "@/hooks/useWindowHeight";
 
 const windsong = WindSong({ subsets: ["latin"], weight: ["400", "500"] });
 const gvibes = Great_Vibes({ subsets: ["latin"], weight: ["400"] });
@@ -51,23 +52,26 @@ const DetailAcara = () => {
     },
   };
 
+  const height = useWindowHeight();
+
   return (
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.8 }}
-      className="h-screen bg-main relative z-0 overflow-hidden"
+      style={{ height: `${height}px` }}
+      className="bg-main relative z-0 overflow-hidden"
     >
       <motion.div variants={cardVariants}>
         <Image
           src={aset1}
           alt="aset1"
-          className="h-screen object-fill opacity-70"
+          className="h-full object-fill opacity-70"
         />
       </motion.div>
 
       <motion.div
-        className="h-screen absolute top-0 left-0 w-full z-10 flex flex-col items-start justify-center"
+        className="h-full absolute top-0 left-0 w-full z-10 flex flex-col items-start justify-center"
         variants={contentVariants}
       >
         <motion.div
