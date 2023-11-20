@@ -43,8 +43,10 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
     };
 
     const handleTouchMove = () => {
-      const event = new Event("wheel");
-      document.dispatchEvent(event);
+      alert("asd");
+
+      // const event = new Event("wheel");
+      // document.dispatchEvent(event);
     };
 
     window.addEventListener("wheel", handleScroll);
