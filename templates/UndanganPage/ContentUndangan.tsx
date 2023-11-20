@@ -44,6 +44,7 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
 
     let startY = 0;
     const sensitivityThreshold = 30;
+
     const handleTouchStart = (event: TouchEvent) => {
       startY = event.touches[0].clientY;
     };
@@ -55,9 +56,11 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
       if (isScrollEnabled) {
         let newActiveComponent: any;
         if (deltaY > sensitivityThreshold) {
-          newActiveComponent = Math.max(activeComponent - 1, 1);
+          alert([deltaY, sensitivityThreshold, deltaY > sensitivityThreshold]);
+          // newActiveComponent = Math.max(activeComponent - 1, 1);
         } else if (deltaY < -sensitivityThreshold) {
-          newActiveComponent = Math.min(activeComponent + 1, 7);
+          alert([deltaY, sensitivityThreshold, deltaY < -sensitivityThreshold]);
+          // newActiveComponent = Math.min(activeComponent + 1, 7);
         }
 
         // Update nilai activeComponent hanya jika nilainya valid
