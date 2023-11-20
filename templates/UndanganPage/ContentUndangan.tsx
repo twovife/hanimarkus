@@ -52,7 +52,7 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
       const currentY = event.touches[0].clientY;
       const touchDistance = Math.abs(currentY - startY);
 
-      if (isScrollEnabled && touchDistance > 50) {
+      if (isScrollEnabled && touchDistance > 10) {
         // 10 is the threshold value
         let newActiveComponent: any;
         if (currentY > startY) {
