@@ -68,11 +68,11 @@ const Mempelai = () => {
         className="h-screen absolute top-0 left-0 w-full z-10 flex flex-col items-start justify-center"
         variants={contentVariants}
       >
-        <div className="px-6 mb-3 text-center">
-          ASSALAMUALAIKUM WR. WB. <br />
-          MAHA SUCI ALLAH SWT YANG TELAH MENCIPTAKAN MAKHLUK-NYA BERPASANG -
-          PASANG. YA ALLAH PERKENANKANLAH KAMI UNTUK MELAKSANAKAN PERNIKAHAN
-          KAMI:
+        <div className="px-6 mb-3 text-center font-light italic">
+          Assalamualaikum Wr. Wb. Segala puji bagi Allah SWT, Yang Maha Suci,
+          yang telah menciptakan makhluk-Nya berpasangan. Ya Allah, dengan penuh
+          kerendahan hati kami memohon izin-Mu untuk melaksanakan ikatan
+          pernikahan kami:
         </div>
         <motion.div
           variants={childVariants}
@@ -86,10 +86,12 @@ const Mempelai = () => {
           <h1 className={`${gvibes.className} text-5xl font-semibold`}>
             Hanifiah Anin Nisa'
           </h1>
-          <p className="text-xl italic mt-3">
+          <p className="text-lg lg:text-xl italic mt-3">
             Putri Dari Bapak Suyadi & Ibu Juwariyah
           </p>
-          <p className="font-semibold">Besuki - Mojo Kediri</p>
+          <p className="text-sm lg:text-base font-semibold">
+            Besuki - Mojo Kediri
+          </p>
         </motion.div>
 
         <div
@@ -103,10 +105,12 @@ const Mempelai = () => {
           <h1 className={`${gvibes.className} text-5xl font-semibold`}>
             Makrus Anwar
           </h1>
-          <p className="text-xl italic mt-3">
+          <p className="text-lg lg:text-xl italic mt-3">
             Putra Dari Bapak H Syamsuddin (Alm) & Ibu Hj Suma Indah (Almh)
           </p>
-          <p className="font-semibold">Besuki - Mojo Pasuruan</p>
+          <p className="text-sm lg:text-base font-semibold">
+            Besuki - Mojo Pasuruan
+          </p>
         </motion.div>
       </motion.div>
     </motion.div>

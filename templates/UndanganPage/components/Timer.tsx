@@ -74,7 +74,7 @@ const Timer = () => {
         variants={childVariants}
         className="p-3 border rounded shadow-lg bg-main text-2xl text-center"
       >
-        <p className="text-3xl lg:text-4xl font-semibold">{`${
+        <p className="text-xl lg:text-4xl font-medium">{`${
           duration.days < 0 ? 0 : duration.days
         }`}</p>
         Hari
@@ -83,7 +83,7 @@ const Timer = () => {
         variants={childVariants}
         className="p-3 border rounded shadow-lg bg-main text-2xl text-center"
       >
-        <p className="text-2xl lg:text-4xl font-semibold">{`${
+        <p className="text-xl lg:text-4xl font-medium">{`${
           duration.hours < 0 ? 0 : duration.hours
         }`}</p>
         Jam
@@ -92,7 +92,7 @@ const Timer = () => {
         variants={childVariants}
         className="p-3 border rounded shadow-lg bg-main text-2xl text-center"
       >
-        <p className="text-2xl lg:text-4xl font-semibold">{`${
+        <p className="text-xl lg:text-4xl font-medium">{`${
           duration.minutes < 0 ? 0 : duration.minutes
         }`}</p>
         Menit
@@ -101,7 +101,7 @@ const Timer = () => {
         variants={childVariants}
         className="p-3 border-2 border-main rounded shadow-lg bg-transparent text-2xl text-center"
       >
-        <p className="text-2xl lg:text-4xl font-medium">{`${
+        <p className="text-xl lg:text-4xl font-light">{`${
           duration.seconds < 0 ? 0 : duration.seconds
         }`}</p>
         Detik

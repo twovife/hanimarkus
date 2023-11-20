@@ -32,7 +32,7 @@ const CoverUndangan: FC<CoverUndanganProps> = ({ isOpen, setIsOpen }) => {
       variants={variants}
       transition={{ duration: 1, ease: "easeInOut" }}
       style={{ height: `${height}px` }}
-      className={` bg-main flex justify-evenly items-center flex-col fixed top-0 right-0 z-10 w-full lg:w-1/3 overflow-hidden`} //height: calc(var(--vh, 1vh) * 100);
+      className={` bg-main flex justify-evenly items-center flex-col fixed top-0 right-0 z-10 w-full lg:w-1/3 overflow-hidden p-3 lg:p-6`} //height: calc(var(--vh, 1vh) * 100);
     >
       <Image
         src={bg1}
@@ -44,28 +44,32 @@ const CoverUndangan: FC<CoverUndanganProps> = ({ isOpen, setIsOpen }) => {
       <AnimasiKananAtas />
       <div className="relative z-10">
         <div
-          className={`${gvibes.className} text-2xl lg:text-3xl text-center mb-10`}
+          className={`${gvibes.className} text-3xl lg:text-4xl text-center mb-10`}
         >
           Undangan Pernikahan
         </div>
         <div className="text-center">
-          <div className={`${windsong.className} text-6xl`}>Hani</div>
-          <div className={`${windsong.className} text-6xl`}>&</div>
-          <div className={`${windsong.className} text-6xl`}>Makrus</div>
+          <div className={`${windsong.className} text-6xl lg:text-8xl`}>
+            Hani
+          </div>
+          <div className={`${windsong.className} text-6xl lg:text-8xl`}>&</div>
+          <div className={`${windsong.className} text-6xl lg:text-8xl`}>
+            Makrus
+          </div>
         </div>
       </div>
       <div className="text-center relative z-10">
-        <div className={`${mont.className} text-md lg:text-lg`}>
+        <div className={`${mont.className} text-sm font-light lg:text-lg`}>
           Kepada Yth Bapak / Ibu / Saudara / i :
         </div>
-        <div className={`${mont.className} text-lg lg:text-xl font-semibold`}>
+        <div className={`${mont.className} text-lg lg:text-2xl font-semibold`}>
           Nama Disini
         </div>
-        <div className={`${mont.className} text-sm`}>
+        <div className={`${mont.className} text-xs lg:text-base`}>
           Mohon maaf jika ada kesalahan penulisan nama & gelar
         </div>
       </div>
-      <div className="relative z-50">
+      <div className="relative z-50 animate-bounce">
         <button
           onClick={() => setIsOpen(true)}
           className="px-2 py-1 border border-rose-500 rounded-md flex justify-center items-center gap-3 text-white bg-rose-400 hover:bg-white hover:text-rose-500"

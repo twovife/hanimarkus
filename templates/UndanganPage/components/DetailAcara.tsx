@@ -71,38 +71,41 @@ const DetailAcara = () => {
       </motion.div>
 
       <motion.div
-        className="h-full absolute top-0 left-0 w-full z-10 flex flex-col items-start justify-center"
+        className="h-full absolute top-0 left-0 w-full z-10 flex flex-col items-start justify-center p-3 lg:p-6"
         variants={contentVariants}
       >
         <motion.div
           variants={childVariants}
-          className={`text-center text-3xl font-semibold w-full mb-6 ${mont.className}`}
+          className={`text-center text-xl lg:text-3xl font-semibold w-full mb-6 ${mont.className}`}
         >
           The Wedding of
         </motion.div>
 
         <motion.div
           variants={childVariants}
-          className={`text-center text-6xl w-full mb-6 ${gvibes.className}`}
+          className={`text-center text-6xl lg:text-8xl w-full mb-6 ${gvibes.className}`}
         >
           Hani & Makrus
         </motion.div>
 
         <motion.div
           variants={childVariants}
-          className={`${mont.className} mx-auto mb-3`}
+          className={`${mont.className} mx-auto mb-6`}
         >
           <Timer />
         </motion.div>
 
         <motion.div
           variants={childVariants}
-          className={`text-center text-2xl font-semibold w-full mb-3 ${mont.className}`}
+          className={`text-center text-2xl font-semibold w-full mb-6 ${mont.className}`}
         >
           01 Desember 2023
         </motion.div>
 
-        <motion.div variants={childVariants} className="mb-3 w-full">
+        <motion.div
+          variants={childVariants}
+          className="mb-3 w-full animate-bounce"
+        >
           <button
             onClick={() =>
               window.open(

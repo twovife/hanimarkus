@@ -54,7 +54,7 @@ const Mempelai = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.8 }}
-      className="h-screen bg-main relative z-0 overflow-hidden"
+      className="h-screen bg-main relative z-0 overflow-hidden p-3 lg:p-6"
     >
       <motion.div variants={cardVariants}>
         <Image
@@ -70,19 +70,19 @@ const Mempelai = () => {
       >
         <motion.h1
           variants={childVariants}
-          className={`${mont.className} text-3xl text-center mx-auto mb-6`}
+          className={`${mont.className} text-xl lg:text-3xl tracking-widest text-center mx-auto mb-6`}
         >
           SAVE THE DATE
         </motion.h1>
         <motion.h1
           variants={childVariants}
-          className={`${windsong.className} text-7xl text-center mx-auto`}
+          className={`${windsong.className} text-6xl lg:text-7xl text-center mx-auto`}
         >
           Akad Nikah
         </motion.h1>
         <motion.p
           variants={childVariants}
-          className={`${mont.className} text-3xl font-semibold text-center mx-auto mt-3`}
+          className={`${mont.className} text-xl lg:text-3xl font-semibold text-center mx-auto mt-3`}
         >
           JUMAT
         </motion.p>
