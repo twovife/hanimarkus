@@ -18,7 +18,7 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
 
   useEffect(() => {
     const handleScroll = (event: any) => {
-      if (isScrollEnabled && isOpen === true) {
+      if (isScrollEnabled) {
         let newActiveComponent: any;
 
         if (event.deltaY > 0) {
@@ -49,33 +49,31 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
     };
 
     const handleTouchMove = (event: TouchEvent) => {
-      if (isOpen == true && isScrollEnabled) {
-        const currentY = event.touches[0].clientY;
-        const touchDistance = Math.abs(currentY - startY);
+      const currentY = event.touches[0].clientY;
+      const touchDistance = Math.abs(currentY - startY);
 
-        if (touchDistance > 10) {
-          // 10 is the threshold value
-          let newActiveComponent: any;
-          if (currentY > startY) {
-            newActiveComponent = Math.max(activeComponent - 1, 1);
-          } else if (currentY < startY) {
-            newActiveComponent = Math.min(activeComponent + 1, 7);
-          }
-
-          // Update nilai activeComponent hanya jika nilainya valid
-          setActiveComponent(newActiveComponent);
-
-          // Menonaktifkan fungsi scroll untuk sementara
-          setScrollEnabled(false);
-
-          // Mengaktifkan kembali fungsi scroll setelah 3 detik
-          setTimeout(() => {
-            setScrollEnabled(true);
-          }, 2000);
+      if (isScrollEnabled && touchDistance > 10) {
+        // 10 is the threshold value
+        let newActiveComponent: any;
+        if (currentY > startY) {
+          newActiveComponent = Math.max(activeComponent - 1, 1);
+        } else if (currentY < startY) {
+          newActiveComponent = Math.min(activeComponent + 1, 7);
         }
-        // Update nilai startY untuk mendeteksi gerakan selanjutnya
-        startY = currentY;
+
+        // Update nilai activeComponent hanya jika nilainya valid
+        setActiveComponent(newActiveComponent);
+
+        // Menonaktifkan fungsi scroll untuk sementara
+        setScrollEnabled(false);
+
+        // Mengaktifkan kembali fungsi scroll setelah 3 detik
+        setTimeout(() => {
+          setScrollEnabled(true);
+        }, 2000);
       }
+      // Update nilai startY untuk mendeteksi gerakan selanjutnya
+      startY = currentY;
     };
 
     window.addEventListener("wheel", handleScroll);
@@ -94,8 +92,10 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
 
+  console.log(audio);
+
   useEffect(() => {
-    const newAudio = new Audio("../songs.mp3");
+    const newAudio = new Audio("/songs.mp3");
     newAudio.preload = "auto";
     newAudio.onloadeddata = () => {
       setAudio(newAudio);

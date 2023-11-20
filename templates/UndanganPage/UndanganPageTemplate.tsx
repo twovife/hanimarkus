@@ -48,7 +48,7 @@ export const UndanganPageTemplate = () => {
         </div>
         <div className="flex-1 relative z-0">
           <CoverUndangan isOpen={isOpen} setIsOpen={setIsOpen} />
-          <ContentUndangan isOpen={isOpen} />
+          {isOpen && <ContentUndangan isOpen={isOpen} />}
         </div>
       </div>
     </main>
