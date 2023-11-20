@@ -43,18 +43,20 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
     };
 
     let startY = 0;
+    const sensitivityThreshold = 30;
     const handleTouchStart = (event: TouchEvent) => {
       startY = event.touches[0].clientY;
     };
 
     const handleTouchMove = (event: TouchEvent) => {
       const currentY = event.touches[0].clientY;
+      const deltaY = currentY - startY;
 
       if (isScrollEnabled) {
         let newActiveComponent: any;
-        if (currentY > startY) {
+        if (deltaY > sensitivityThreshold) {
           newActiveComponent = Math.max(activeComponent - 1, 1);
-        } else if (currentY < startY) {
+        } else if (deltaY < -sensitivityThreshold) {
           newActiveComponent = Math.min(activeComponent + 1, 7);
         }
 
