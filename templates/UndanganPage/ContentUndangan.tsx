@@ -43,7 +43,6 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
     };
 
     let startY = 0;
-    const sensitivityThreshold = 30;
 
     const handleTouchStart = (event: TouchEvent) => {
       startY = event.touches[0].clientY;
@@ -51,16 +50,15 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
 
     const handleTouchMove = (event: TouchEvent) => {
       const currentY = event.touches[0].clientY;
-      const deltaY = currentY - startY;
+      const touchDistance = Math.abs(currentY - startY);
 
-      if (isScrollEnabled) {
+      if (isScrollEnabled && touchDistance > 50) {
+        // 10 is the threshold value
         let newActiveComponent: any;
-        if (deltaY > sensitivityThreshold) {
-          alert([deltaY, sensitivityThreshold, deltaY > sensitivityThreshold]);
-          // newActiveComponent = Math.max(activeComponent - 1, 1);
-        } else if (deltaY < -sensitivityThreshold) {
-          alert([deltaY, sensitivityThreshold, deltaY < -sensitivityThreshold]);
-          // newActiveComponent = Math.min(activeComponent + 1, 7);
+        if (currentY > startY) {
+          newActiveComponent = Math.max(activeComponent - 1, 1);
+        } else if (currentY < startY) {
+          newActiveComponent = Math.min(activeComponent + 1, 7);
         }
 
         // Update nilai activeComponent hanya jika nilainya valid
@@ -87,8 +85,8 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
     return () => {
       window.removeEventListener("wheel", handleScroll);
 
-      document.addEventListener("touchstart", handleTouchStart);
-      document.addEventListener("touchmove", handleTouchMove);
+      document.removeEventListener("touchstart", handleTouchStart);
+      document.removeEventListener("touchmove", handleTouchMove);
     };
   }, [isScrollEnabled]);
 
