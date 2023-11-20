@@ -62,7 +62,7 @@ const KamiBahagia = () => {
       </motion.div>
 
       <motion.div
-        className="h-screen absolute top-0 left-0 w-full z-10 flex flex-col items-start justify-center gap-3"
+        className="h-screen absolute top-0 left-0 w-full z-10 flex flex-col items-start justify-center gap-3 p-3 lg:p-6"
         variants={contentVariants}
       >
         <motion.div
@@ -78,7 +78,7 @@ const KamiBahagia = () => {
 
         <motion.div
           variants={childVariants}
-          className={`text-center text-3xl font-semibold w-full mb-3 ${mont.className}`}
+          className={`text-center text-xl lg:text-3xl font-semibold w-full mb-3 ${mont.className}`}
         >
           Kami Yang Berbahagia
         </motion.div>

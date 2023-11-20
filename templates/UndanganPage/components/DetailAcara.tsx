@@ -68,7 +68,7 @@ const DetailAcara = () => {
         <Image
           src={aset1}
           alt="aset1"
-          className="h-full object-fill opacity-70"
+          className="h-screen object-fill opacity-70"
         />
       </motion.div>
 
@@ -121,25 +121,26 @@ const DetailAcara = () => {
             <p>Tambahkan Pengingat</p>
           </button>
         </motion.div>
-      </motion.div>
-      <motion.div
-        initial={{
-          y: 0,
-          opacity: 0,
-        }}
-        animate={{
-          y: [60, 30, 0],
-          opacity: [1, 0.8, 0],
-        }}
-        transition={{
-          duration: 1.5,
-          repeat: Infinity,
-          ease: "easeInOut",
-          repeatDelay: 0.5,
-        }}
-        className="absolute bottom-1/4 left-1/2 -translate-x-1/2 z-10 flex"
-      >
-        <MdSwipeUp className="text-6xl text-gray-500" />
+        <motion.div
+          initial={{
+            y: 0,
+            opacity: 0,
+          }}
+          animate={{
+            y: [60, 30, 0],
+            opacity: [1, 0.8, 0],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            repeatDelay: 0.5,
+          }}
+          className="max-w-lg mx-auto text-center"
+        >
+          <MdSwipeUp className="text-6xl text-gray-500" />
+          <p>Geser</p>
+        </motion.div>
       </motion.div>
     </motion.div>
   );

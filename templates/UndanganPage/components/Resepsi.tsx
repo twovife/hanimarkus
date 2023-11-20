@@ -65,7 +65,7 @@ const Resepsi = () => {
       </motion.div>
 
       <motion.div
-        className="h-screen absolute top-0 left-0 w-full z-10 flex flex-col items-start justify-center"
+        className="h-screen absolute top-0 left-0 w-full z-10 flex flex-col items-start justify-center p-3 lg:p-6"
         variants={contentVariants}
       >
         <motion.h1
