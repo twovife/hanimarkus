@@ -68,7 +68,7 @@ const Mempelai = () => {
         className="h-screen absolute top-0 left-0 w-full z-10 flex flex-col items-start justify-center"
         variants={contentVariants}
       >
-        <div className="px-6 mb-3 text-center font-light italic">
+        <div className="px-6 mb-3 text-center font-light italic text-sm lg:text-base">
           Assalamualaikum Wr. Wb. Segala puji bagi Allah SWT, Yang Maha Suci,
           yang telah menciptakan makhluk-Nya berpasangan. Ya Allah, dengan penuh
           kerendahan hati kami memohon izin-Mu untuk melaksanakan ikatan

@@ -107,7 +107,7 @@ const Mempelai = () => {
         </div>
         <motion.p
           variants={childVariants}
-          className={`${mont.className} text-lg italic text-center mx-auto mt-6`}
+          className={`${mont.className} text-sm lg:text-lg italic text-center mx-auto mt-6`}
         >
           BERTEMPAT DI KEDIAMAN BAPAK SUYADI,
           <br />

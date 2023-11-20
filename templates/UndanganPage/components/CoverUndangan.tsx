@@ -37,8 +37,8 @@ const CoverUndangan: FC<CoverUndanganProps> = ({ isOpen, setIsOpen }) => {
       <Image
         src={bg1}
         alt="bgpictures"
-        style={{ height: `${height}px` }}
-        className={`absolute z-0 object-cover`}
+        // style={{ height: `${height}px` }}
+        className={`absolute z-0 object-cover h-full`}
       />
       <AnimasiKiriBawah />
       <AnimasiKananAtas />

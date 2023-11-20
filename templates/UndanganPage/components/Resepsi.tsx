@@ -79,14 +79,14 @@ const Resepsi = () => {
           <div>
             <motion.p
               variants={childVariants}
-              className={`${mont.className} text-3xl font-semibold text-center mx-auto mt-6`}
+              className={`${mont.className} text-xl lg:text-3xl font-semibold text-center mx-auto mt-6`}
             >
               JUMAT
             </motion.p>
             <div className="flex justify-center items-center mx-auto gap-3">
               <motion.div
                 variants={contentVariants}
-                className={`${mont.className} text-5xl font-semibold text-gray-500 text-end mx-auto`}
+                className={`${mont.className} text-3xl lg:text-5xl font-semibold text-gray-500 text-end mx-auto`}
               >
                 <motion.div variants={childVariants}>0 1</motion.div>
                 <motion.div variants={childVariants}>D E S</motion.div>
@@ -94,7 +94,7 @@ const Resepsi = () => {
               </motion.div>
               <motion.div
                 variants={contentVariants}
-                className={`${mont.className} text-4xl text-start mx-auto leading-snug`}
+                className={`${mont.className} text-2xl lg:text-4xl text-start mx-auto leading-snug`}
               >
                 <motion.div variants={childVariants}>14:00</motion.div>
                 <motion.div variants={childVariants}>s/d</motion.div>
@@ -105,14 +105,14 @@ const Resepsi = () => {
           <div>
             <motion.p
               variants={childVariants}
-              className={`${mont.className} text-3xl font-semibold text-center mx-auto mt-6`}
+              className={`${mont.className} text-xl lg:text-3xl font-semibold text-center mx-auto mt-6`}
             >
-              JUMAT
+              SABTU
             </motion.p>
             <div className="flex justify-center items-center mx-auto gap-3">
               <motion.div
                 variants={contentVariants}
-                className={`${mont.className} text-5xl font-semibold text-gray-500 text-end mx-auto`}
+                className={`${mont.className} text-3xl lg:text-5xl font-semibold text-gray-500 text-end mx-auto`}
               >
                 <motion.div variants={childVariants}>0 2</motion.div>
                 <motion.div variants={childVariants}>D E S</motion.div>
@@ -120,7 +120,7 @@ const Resepsi = () => {
               </motion.div>
               <motion.div
                 variants={contentVariants}
-                className={`${mont.className} text-4xl text-start mx-auto leading-snug`}
+                className={`${mont.className} text-2xl lg:text-4xl text-start mx-auto leading-snug`}
               >
                 <motion.div variants={childVariants}></motion.div>
                 <motion.div variants={childVariants}>Relax</motion.div>
@@ -131,7 +131,7 @@ const Resepsi = () => {
         </div>
         <motion.p
           variants={childVariants}
-          className={`${mont.className} text-lg italic text-center mx-auto mt-6`}
+          className={`${mont.className} text-sm lg:text-lg italic text-center mx-auto mt-6`}
         >
           BERTEMPAT DI KEDIAMAN BAPAK SUYADI,
           <br />
