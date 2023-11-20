@@ -42,18 +42,38 @@ const ContentUndangan: FC<CoverUndanganProps> = ({ isOpen, ...props }) => {
       }
     };
 
-    const handleTouchMove = () => {
-      alert("asd");
+    let startY = 0;
 
-      // const event = new Event("wheel");
-      // document.dispatchEvent(event);
+    const handleTouchStart = (event: TouchEvent) => {
+      startY = event.touches[0].clientY;
+    };
+
+    const handleTouchMove = (event: TouchEvent) => {
+      const currentY = event.touches[0].clientY;
+
+      if (currentY > startY) {
+        // Touch ke bawah
+        alert("scoll kebawah");
+        // console.log('Touch ke bawah');
+      } else if (currentY < startY) {
+        // Touch ke atas
+        alert("scoll keatas");
+        // console.log('Touch ke atas');
+      }
+
+      // Update nilai startY untuk mendeteksi gerakan selanjutnya
+      startY = currentY;
     };
 
     window.addEventListener("wheel", handleScroll);
+
+    document.addEventListener("touchstart", handleTouchStart);
     document.addEventListener("touchmove", handleTouchMove);
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
+
+      document.addEventListener("touchstart", handleTouchStart);
       document.addEventListener("touchmove", handleTouchMove);
     };
   }, [isScrollEnabled]);
