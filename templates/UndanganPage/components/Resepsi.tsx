@@ -70,7 +70,7 @@ const Resepsi = () => {
       >
         <motion.h1
           variants={childVariants}
-          className={`${windsong.className} text-8xl text-center mx-auto`}
+          className={`${windsong.className} text-6xl text-center mx-auto`}
         >
           Resepsi
         </motion.h1>
@@ -133,9 +133,9 @@ const Resepsi = () => {
           variants={childVariants}
           className={`${mont.className} text-sm lg:text-lg italic text-center mx-auto mt-6`}
         >
-          BERTEMPAT DI KEDIAMAN BAPAK SUYADI,
+          Bertempat di kediaman bapak Suyadi,
           <br />
-          DSN. BESUKI 01/01, DS, JUGO KEC. MOJO KAB.KEDIRI
+          Dsn. Besuki Ds. Jugo Kec. Mojo Kab. Kediri
         </motion.p>
       </motion.div>
     </motion.div>
