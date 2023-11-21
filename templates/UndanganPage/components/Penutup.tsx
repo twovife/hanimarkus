@@ -94,7 +94,7 @@ const Penutup = () => {
         </div>
         <div className="flex items-center justify-center w-full">
           <div className="text-center">
-            <IoHome className="text-9xl mx-auto" />
+            <IoHome className="text-8xl mx-auto" />
             <p className="text-center">Hanifiah Anin Nisa'</p>
             <ButtonCopy
               dataValue="Rt/Rw 01/01 Dsn. Besuki Ds. Jugo Kec. Mojo Kab. Kediri (masjid

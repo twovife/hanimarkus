@@ -65,13 +65,14 @@ const Quotes = () => {
         variants={contentVariants}
       >
         <div
-          className={`${gvibes.className} text-2xl max-w-sm mx-auto lg:text-3xl text-center mb-10`}
+          className={`${gvibes.className} text-lg max-w-sm mx-auto lg:text-2xl text-center mb-10`}
         >
-          Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
-          pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
-          dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
-          kasih dan sayang.
-          <div className={`${mont.className} text-sm`}>-QS Ar- Rum 21-</div>
+          Dan di antara tanda-tanda kekuasaan-Nya adalah <br />
+          diciptakan-Nya untukmu pasangan hidup dari jenismu sendiri <br />
+          supaya kamu mendapat ketenangan hati dan dijadikan-Nya kasih sayang
+          diantara kamu. Sesungguhnya yang demikian menjadi tanda - tanda
+          kebesaran-Nya bagi orang - orang yang berfikir
+          <div className={`${mont.className} text-sm`}>-QS Ar. Rum 21-</div>
         </div>
       </motion.div>
     </motion.div>
