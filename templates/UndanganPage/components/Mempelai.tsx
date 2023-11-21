@@ -76,13 +76,13 @@ const Mempelai = () => {
         </div>
         <motion.div
           variants={childVariants}
-          className="mx-auto w-1/3 rounded-full overflow-hidden shadow-xl border-2 border-black/10 mb-3"
+          className="mx-auto w-1/3 rounded-full overflow-hidden shadow-xl border-2 border-black/10 mb-6"
         >
           <Image src={pengantin1} alt="pengantin1" />
         </motion.div>
 
         <motion.div variants={childVariants} className="text-center mx-auto">
-          <p className={`${mont.className} underline mb-3`}>Mempelai Putri</p>
+          {/* <p className={`${mont.className} underline mb-3`}>Mempelai Putri</p> */}
           <h1 className={`${gvibes.className} text-5xl font-semibold`}>
             Hanifiah Anin Nisa'
           </h1>
@@ -101,7 +101,7 @@ const Mempelai = () => {
         </div>
 
         <motion.div variants={childVariants} className="text-center mx-auto">
-          <p className={`${mont.className} underline mb-3`}>Mempelai Putra</p>
+          {/* <p className={`${mont.className} underline mb-3`}>Mempelai Putra</p> */}
           <h1 className={`${gvibes.className} text-5xl font-semibold`}>
             Makrus Anwar
           </h1>
